@@ -120,30 +120,30 @@ function articleMaker (obj) {
   const article = document.createElement(`div`);
   const articleTitle = document.createElement(`h2`);
   const articleDate = document.createElement(`p`);
-  const par1 = document.createElement(`p`);
-  const par2 = document.createElement(`p`);
-  const par3 = document.createElement(`p`);
+  const p1 = document.createElement(`p`);
+  const p2 = document.createElement(`p`);
+  const p3 = document.createElement(`p`);
   const button = document.createElement(`span`);
 
   article.classList.add(`article`);
   articleDate.classList.add(`date`);
   button.classList.add(`expandButton`);
-  par1.classList.add(`text-content`, `par1`);
-  par2.classList.add(`text-contend`, `par2`);
-  par3.classList.add(`text-content`, `par3`);
+  p1.classList.add(`text-content`, `p1`);
+  p2.classList.add(`text-contend`, `p2`);
+  p3.classList.add(`text-content`, `p3`);
 
   article.appendChild(articleTitle);
   article.appendChild(articleDate);
-  article.appendChild(par1);
-  article.appendChild(par2);
-  article.appendChild(par3);
+  article.appendChild(p1);
+  article.appendChild(p2);
+  article.appendChild(p3);
   article.appendChild(button);
 
   articleTitle.textContent = obj.title;
   articleDate.textContent = obj.date;
-  par1.textContent = obj.firstParagraph;
-  par2.textContent = obj.secondParagraph;
-  par3.textContent = obj.thirdParagraph;
+  p1.textContent = obj.firstParagraph;
+  p2.textContent = obj.secondParagraph;
+  p3.textContent = obj.thirdParagraph;
   button.textContent = `+`
 
   button.addEventListener(`click`, () => {
@@ -158,16 +158,14 @@ data.forEach(obj => {
   document.querySelector(`div.articles`).appendChild(appendArticle);
 })
 
-const addData = {
-  title: `Upcoming Events`,
-  date: `December 25th, 2020`,
-  firstParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
-  Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
-  Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`,
+const newSection = {
+  title: `Another Section`,
+  date: `January 25th, 2021`,
+  firstParagraph: `This is the first paragraph.`,
 
-  secondParagraph: 'Ho Ho Ho',
+  secondParagraph: 'This is the second paragraph.',
 
-  thirdParagraph: `Merry Christmas!`
+  thirdParagraph: `This is the third paragraph.`
 }
 
-document.querySelector(`.articles`).append(articleMaker(addData));
+document.querySelector(`.articles`).append(articleMaker(newSection));

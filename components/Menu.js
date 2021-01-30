@@ -33,14 +33,6 @@ let menuItems = [
 */
 
 
-
-
-// menu.forEach(element => {
-//   const item = document.createElement(`li`);
-//   itemtextContent = `element`;
-//   unorderedList.appendChild(item);
-// });
-
 function menuMaker (arr) {
   const menu = document.createElement(`div`);
   menu.classList.add(`menu`);
